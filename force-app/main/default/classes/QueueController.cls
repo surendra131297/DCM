@@ -1,8 +1,8 @@
 /**
  * @description: This class is used to fetch queue details and associated users' case counts.
  * @Author: Sprutiraj Panda, Surendranath Reddy, SubbaReddy Venkata
- * @Last Modified By: Subba Reddy Venkata, Sprutiraj Panda
- * @Last Modified On: 25/04/2023
+ * @Last Modified By: ChangeMeIn@UserSettingsUnder.SFDoc
+ * @Last Modified On: 08-16-2023
  * @Modification Log:
  * Ver  Date          Author                   Last Modification
  * 1.0  26/04/2023    Sprutiraj Panda          Initial Version
@@ -20,7 +20,7 @@ public with sharing class QueueController {
         List<Group> queues = [SELECT Id, Name, Owner.Name, Owner.Email FROM Group WHERE Type = 'Queue' WITH SECURITY_ENFORCED];
         return queues;
     }
-
+//sprutiraj
     /**
      * @description Gets a list of users associated with a specific queue along with their case counts.
      * This method queries the 'GroupMember' object to fetch the users belonging to the specified queue.

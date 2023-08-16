@@ -25,6 +25,7 @@ public with sharing class AssignCasesToShiftQueueScheduler implements Schedulabl
      */
     private void initShiftTimings() {
         // Retrieve ShiftTime__c custom settings
+       
         ShiftTime__c shiftTimes = ShiftTime__c.getInstance();
         if (shiftTimes != null) {
             shiftTimings.put('Morning', parseTime(shiftTimes.Shift1StartTime__c));
